@@ -30,10 +30,14 @@ A [rational function][rational-function] `f(x)` is defined as
 
 <!-- <equation class="equation" label="eq:rational_function" align="center" raw="f(x) = \frac{P(x)}{Q(x)}" alt="Rational function definition."> -->
 
-<div class="equation" align="center" data-raw-text="f(x) = \frac{P(x)}{Q(x)}" data-equation="eq:rational_function">
+```math
+f(x) = \frac{P(x)}{Q(x)}
+```
+
+<!-- <div class="equation" align="center" data-raw-text="f(x) = \frac{P(x)}{Q(x)}" data-equation="eq:rational_function">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@7e0a95722efd9c771b129597380c63dc6715508b/lib/node_modules/@stdlib/math/base/tools/evalrational/docs/img/equation_rational_function.svg" alt="Rational function definition.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -41,10 +45,14 @@ where both `P(x)` and `Q(x)` are polynomials in `x`. A [polynomial][polynomial] 
 
 <!-- <equation class="equation" label="eq:polynomial" align="center" raw="c_nx^n + c_{n-1}x^{n-1} + \ldots + c_1x^1 + c_0 = \sum_{i=0}^{n} c_ix^i" alt="Polynomial expression."> -->
 
-<div class="equation" align="center" data-raw-text="c_nx^n + c_{n-1}x^{n-1} + \ldots + c_1x^1 + c_0 = \sum_{i=0}^{n} c_ix^i" data-equation="eq:polynomial">
+```math
+c_nx^n + c_{n-1}x^{n-1} + \ldots + c_1x^1 + c_0 = \sum_{i=0}^{n} c_ix^i
+```
+
+<!-- <div class="equation" align="center" data-raw-text="c_nx^n + c_{n-1}x^{n-1} + \ldots + c_1x^1 + c_0 = \sum_{i=0}^{n} c_ix^i" data-equation="eq:polynomial">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@7e0a95722efd9c771b129597380c63dc6715508b/lib/node_modules/@stdlib/math/base/tools/evalrational/docs/img/equation_polynomial.svg" alt="Polynomial expression.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -54,38 +62,30 @@ where `c_n, c_{n-1}, ..., c_0` are constants.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-tools-evalrational
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-evalrational = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var evalrational = require( 'path/to/vendor/umd/math-base-tools-evalrational/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.evalrational;
-})();
-</script>
+var evalrational = require( '@stdlib/math-base-tools-evalrational' );
 ```
 
 #### evalrational( P, Q, x )
@@ -152,16 +152,11 @@ v = rational( 2.0 ); // => (20*2^0 + 8*2^1 + 3*2^2) / (10*2^0 + 9*2^1 + 1*2^2) =
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var round = require( '@stdlib/math-base-special-round' );
+var Float64Array = require( '@stdlib/array-float64' );
+var evalrational = require( '@stdlib/math-base-tools-evalrational' );
 
 var rational;
 var sign;
@@ -197,11 +192,6 @@ for ( i = 0; i < 100; i++ ) {
     v = (randu()*100.0) - 50.0;
     console.log( 'f(%d) = %d', v, rational( v ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -270,7 +260,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -292,7 +282,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/tools/evalpoly]: https://github.com/stdlib-js/math-base-tools-evalpoly/tree/umd
+[@stdlib/math/base/tools/evalpoly]: https://github.com/stdlib-js/math-base-tools-evalpoly
 
 <!-- </related-links> -->
 
