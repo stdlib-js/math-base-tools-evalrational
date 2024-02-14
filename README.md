@@ -80,13 +80,18 @@ where `c_n, c_{n-1}, ..., c_0` are constants.
 ## Usage
 
 ```javascript
+import evalrational from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-tools-evalrational/tags). For example,
+
+```javascript
 import evalrational from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@v0.2.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@v0.2.0-deno/mod.js';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@deno/mod.js';
 ```
 
 #### evalrational( P, Q, x )
@@ -157,7 +162,7 @@ v = rational( 2.0 ); // => (20*2^0 + 8*2^1 + 3*2^2) / (10*2^0 + 9*2^1 + 1*2^2) =
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@deno/mod.js';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import evalrational from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@v0.2.0-deno/mod.js';
+import evalrational from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@deno/mod.js';
 
 var rational;
 var sign;
