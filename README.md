@@ -82,7 +82,7 @@ where `c_n, c_{n-1}, ..., c_0` are constants.
 To use in Observable,
 
 ```javascript
-evalrational = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@umd/browser.js' )
+evalrational = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@v0.2.1-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -94,7 +94,7 @@ var evalrational = require( 'path/to/vendor/umd/math-base-tools-evalrational/ind
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@v0.2.1-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -178,7 +178,7 @@ v = rational( 2.0 ); // => (20*2^0 + 8*2^1 + 3*2^2) / (10*2^0 + 9*2^1 + 1*2^2) =
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@v0.2.1-umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
