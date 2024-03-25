@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Evaluate a [rational function][rational-function].
+> Evaluate a [rational function][rational-function] using double-precision floating-point arithmetic.
 
 <section class="intro">
 
@@ -73,25 +73,37 @@ where `c_n, c_{n-1}, ..., c_0` are constants.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-tools-evalrational
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import evalrational from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@deno/mod.js';
+var evalrational = require( '@stdlib/math-base-tools-evalrational' );
 ```
 
 #### evalrational( P, Q, x )
 
-Evaluates a [rational function][rational-function] at a value `x`. The coefficients `P` and `Q` are expected to be arrays of the **same** length.
+Evaluates a [rational function][rational-function] at a value `x` using double-precision floating-point arithmetic.
 
 ```javascript
 var P = [ -6.0, -5.0 ];
@@ -118,7 +130,7 @@ Coefficients should be ordered in **ascending** degree, thus matching summation 
 
 #### evalrational.factory( P, Q )
 
-Uses code generation to in-line coefficients and return a `function` for evaluating a [rational function][rational-function].
+Uses code generation to in-line coefficients and return a function for evaluating a [rational function][rational-function] using double-precision floating-point arithmetic.
 
 ```javascript
 var P = [ 20.0, 8.0, 3.0 ];
@@ -141,6 +153,7 @@ v = rational( 2.0 ); // => (20*2^0 + 8*2^1 + 3*2^2) / (10*2^0 + 9*2^1 + 1*2^2) =
 
 ## Notes
 
+-   The coefficients `P` and `Q` are expected to be arrays of the **same** length.
 -   For hot code paths in which coefficients are invariant, a compiled function will be more performant than `evalrational()`.
 -   While code generation can boost performance, its use may be problematic in browser contexts enforcing a strict [content security policy][mdn-csp] (CSP). If running in or targeting an environment with a CSP, avoid using code generation.
 
@@ -154,43 +167,26 @@ v = rational( 2.0 ); // => (20*2^0 + 8*2^1 + 3*2^2) / (10*2^0 + 9*2^1 + 1*2^2) =
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@deno/mod.js';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import evalrational from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@deno/mod.js';
-
-var rational;
-var sign;
-var len;
-var P;
-var Q;
-var v;
-var i;
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var uniform = require( '@stdlib/random-base-uniform' );
+var evalrational = require( '@stdlib/math-base-tools-evalrational' );
 
 // Create two arrays of random coefficients...
-len = 10;
-P = new Float64Array( len );
-Q = new Float64Array( len );
-for ( i = 0; i < len; i++ ) {
-    if ( randu() < 0.5 ) {
-        sign = -1.0;
-    } else {
-        sign = 1.0;
-    }
-    P[ i ] = sign * round( randu()*100 );
-    Q[ i ] = sign * round( randu()*100 );
-}
+var P = discreteUniform( 10, -100, 100 );
+var Q = discreteUniform( 10, -100, 100 );
 
 // Evaluate the rational function at random values...
+var v;
+var i;
 for ( i = 0; i < 100; i++ ) {
-    v = randu() * 100.0;
+    v = uniform( 0.0, 100.0 );
     console.log( 'f(%d) = %d', v, evalrational( P, Q, v ) );
 }
 
 // Generate an `evalrational` function...
-rational = evalrational.factory( P, Q );
+var rational = evalrational.factory( P, Q );
 for ( i = 0; i < 100; i++ ) {
-    v = (randu()*100.0) - 50.0;
+    v = uniform( -50.0, 50.0 );
     console.log( 'f(%d) = %d', v, rational( v ) );
 }
 ```
@@ -222,7 +218,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -286,7 +282,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/tools/evalpoly]: https://github.com/stdlib-js/math-base-tools-evalpoly/tree/deno
+[@stdlib/math/base/tools/evalpoly]: https://github.com/stdlib-js/math-base-tools-evalpoly
 
 <!-- </related-links> -->
 
