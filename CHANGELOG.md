@@ -2,9 +2,9 @@
 
 > Package changelog.
 
-<section class="release" id="v0.2.2">
+<section class="release" id="unreleased">
 
-## 0.2.2 (2024-07-28)
+## Unreleased (2024-08-01)
 
 <section class="commits">
 
@@ -12,9 +12,7 @@
 
 <details>
 
--   [`0d3b4d0`](https://github.com/stdlib-js/stdlib/commit/0d3b4d0ceeb5eb56c80da840d3f080f98af7229b) - **chore:** remove extra spaces and lint fixes _(by Philipp Burckhardt)_
--   [`0f12f81`](https://github.com/stdlib-js/stdlib/commit/0f12f814cca3d4e28d2dafb7765400256828464b) - **docs:** update examples _(by Athan Reines)_
--   [`ddd2718`](https://github.com/stdlib-js/stdlib/commit/ddd2718cd6fb51028e7d03c94fffc25ec1462139) - **docs:** update descriptions and refactor tests and benchmarks _(by Athan Reines)_
+-   [`22c4d29`](https://github.com/stdlib-js/stdlib/commit/22c4d29898e2b5bb4cb071a6b7f62536027eaf28) - **docs:** remove blank line _(by Athan Reines)_
 
 </details>
 
@@ -26,14 +24,23 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 1 person contributed to this release. Thank you to this contributor:
 
 -   Athan Reines
--   Philipp Burckhardt
 
 </section>
 
 <!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
+<section class="release" id="v0.2.2">
+
+## 0.2.2 (2024-07-28)
+
+No changes reported for this release.
 
 </section>
 
@@ -63,57 +70,7 @@ No changes reported for this release.
 
 ## 0.1.0 (2023-09-24)
 
-<section class="features">
-
-### Features
-
--   [`58832ee`](https://github.com/stdlib-js/stdlib/commit/58832eef6d93e6519622148242600eae93dca4d9) - update minimum TypeScript version
-
-</section>
-
-<!-- /.features -->
-
-<section class="breaking-changes">
-
-### BREAKING CHANGES
-
--   [`58832ee`](https://github.com/stdlib-js/stdlib/commit/58832eef6d93e6519622148242600eae93dca4d9): update minimum TypeScript version
--   [`58832ee`](https://github.com/stdlib-js/stdlib/commit/58832eef6d93e6519622148242600eae93dca4d9): update minimum TypeScript version to 4.1 
-
-    -   To migrate, users should upgrade their TypeScript version to at least version 4.1.
-
-</section>
-
-<!-- /.breaking-changes -->
-
-<section class="commits">
-
-### Commits
-
-<details>
-
--   [`58832ee`](https://github.com/stdlib-js/stdlib/commit/58832eef6d93e6519622148242600eae93dca4d9) - **feat:** update minimum TypeScript version _(by Philipp Burckhardt)_
--   [`fab1183`](https://github.com/stdlib-js/stdlib/commit/fab118374312427108eaf6bf52af53f1b24a3eb3) - **docs:** remove empty lines _(by Philipp Burckhardt)_
--   [`b734544`](https://github.com/stdlib-js/stdlib/commit/b734544a52783cb7f5cf1115f4355cabe46d0abe) - **refactor:** use strictEqual checks _(by Philipp Burckhardt)_
--   [`c5da1f9`](https://github.com/stdlib-js/stdlib/commit/c5da1f9a22b1033d40115798acf13a09acf9410d) - **docs:** render equations via math code blocks _(by Philipp Burckhardt)_
-
-</details>
-
-</section>
-
-<!-- /.commits -->
-
-<section class="contributors">
-
-### Contributors
-
-A total of 1 person contributed to this release. Thank you to this contributor:
-
--   Philipp Burckhardt
-
-</section>
-
-<!-- /.contributors -->
+No changes reported for this release.
 
 </section>
 
