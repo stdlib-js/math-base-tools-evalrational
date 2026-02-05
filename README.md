@@ -80,13 +80,13 @@ where `c_n, c_{n-1}, ..., c_0` are constants.
 ## Usage
 
 ```javascript
-import evalrational from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@esm/index.mjs';
+import evalrational from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@v0.2.3-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@esm/index.mjs';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@v0.2.3-esm/index.mjs';
 ```
 
 #### evalrational( P, Q, x )
@@ -162,7 +162,7 @@ v = rational( 2.0 ); // => (20*2^0 + 8*2^1 + 3*2^2) / (10*2^0 + 9*2^1 + 1*2^2) =
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@esm/index.mjs';
-import evalrational from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@esm/index.mjs';
+import evalrational from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalrational@v0.2.3-esm/index.mjs';
 
 // Create two arrays of random coefficients...
 var P = discreteUniform( 10, -100, 100 );
