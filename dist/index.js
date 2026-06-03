@@ -1,0 +1,8 @@
+"use strict";var o=function(n,t){return function(){return t||n((t={exports:{}}).exports,t),t.exports}};var s=o(function(d,u){
+var q=require('@stdlib/math-base-special-abs/dist');function g(n,t,r){var f,i,a,e;if(f=n.length,f===0)return NaN;if(f!==t.length)return NaN;if(r===0||f===1)return n[0]/t[0];if(q(r)<=1)for(i=n[f-1],a=t[f-1],e=f-2;e>=0;--e)i*=r,a*=r,i+=n[e],a+=t[e];else for(r=1/r,i=n[0],a=t[0],e=1;e<f;++e)i*=r,a*=r,i+=n[e],a+=t[e];return i/a}u.exports=g
+});var v=o(function(j,l){
+var h=require('@stdlib/function-ctor/dist'),y=s();function p(n,t){var r,f,i,a,e;if(n.length>500)return x;if(r="return function evalrational(x){",i=n.length,r+="var ax,s1,s2;",i===0)r+="return NaN;";else if(i!==t.length)r+="return NaN;";else if(i===1)f=n[0]/t[0],r+="return "+f+";";else{for(f=n[0]/t[0],r+="if(x===0.0){return "+f+";}",r+="if(x<0.0){ax=-x;}else{ax=x;}",r+="if(ax<=1.0){",r+="s1 = "+n[0],a=i-1,e=1;e<i;e++)r+="+x*",e<a&&(r+="("),r+=n[e];for(e=0;e<a-1;e++)r+=")";for(r+=";",r+="s2 = "+t[0],a=i-1,e=1;e<i;e++)r+="+x*",e<a&&(r+="("),r+=t[e];for(e=0;e<a-1;e++)r+=")";for(r+=";",r+="}else{",r+="x = 1.0/x;",a=i-1,r+="s1 = "+n[a],e=a-1;e>=0;e--)r+="+x*",e>0&&(r+="("),r+=n[e];for(e=0;e<a-1;e++)r+=")";for(r+=";",a=i-1,r+="s2 = "+t[a],e=a-1;e>=0;e--)r+="+x*",e>0&&(r+="("),r+=t[e];for(e=0;e<a-1;e++)r+=")";r+=";",r+="}",r+="return s1/s2;"}return r+="}",r+="//# sourceURL=evalrational.factory.js",new h(r)();function x(N){return y(n,t,N)}}l.exports=p
+});var m=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),c=s(),R=v();m(c,"factory",R);module.exports=c;
+/** @license Apache-2.0 */
+/** @license Apache-2.0 */
+//# sourceMappingURL=index.js.map
